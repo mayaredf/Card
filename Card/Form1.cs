@@ -19,7 +19,7 @@ namespace Card
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            //27,67 px
         }
     }
 }

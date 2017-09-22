@@ -28,28 +28,60 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Title = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.titleLabel = new System.Windows.Forms.Label();
+            this.nameLabel = new System.Windows.Forms.Label();
+            this.dateLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // Title
+            // titleLabel
             // 
-            this.Title.BackColor = System.Drawing.Color.Black;
-            this.Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Title.ForeColor = System.Drawing.Color.White;
-            this.Title.Location = new System.Drawing.Point(45, 66);
-            this.Title.Name = "Title";
-            this.Title.Size = new System.Drawing.Size(315, 35);
-            this.Title.TabIndex = 0;
-            this.Title.Text = "Capricorn Greeting Card";
-            this.Title.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.titleLabel.AutoSize = true;
+            this.titleLabel.BackColor = System.Drawing.Color.Transparent;
+            this.titleLabel.Font = new System.Drawing.Font("Source Code Pro", 18F);
+            this.titleLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.titleLabel.Location = new System.Drawing.Point(31, 51);
+            this.titleLabel.Name = "titleLabel";
+            this.titleLabel.Size = new System.Drawing.Size(336, 31);
+            this.titleLabel.TabIndex = 0;
+            this.titleLabel.Text = "Capricorn Greeting Card";
+            // 
+            // nameLabel
+            // 
+            this.nameLabel.AutoSize = true;
+            this.nameLabel.BackColor = System.Drawing.Color.Transparent;
+            this.nameLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameLabel.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.nameLabel.Location = new System.Drawing.Point(94, 419);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(207, 18);
+            this.nameLabel.TabIndex = 1;
+            this.nameLabel.Text = "by Maya Redford-Haines";
+            // 
+            // dateLabel
+            // 
+            this.dateLabel.AutoSize = true;
+            this.dateLabel.BackColor = System.Drawing.Color.Transparent;
+            this.dateLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateLabel.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.dateLabel.Location = new System.Drawing.Point(104, 437);
+            this.dateLabel.Name = "dateLabel";
+            this.dateLabel.Size = new System.Drawing.Size(174, 18);
+            this.dateLabel.TabIndex = 2;
+            this.dateLabel.Text = "September 22, 2017";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(397, 513);
-            this.Controls.Add(this.Title);
+            this.Controls.Add(this.dateLabel);
+            this.Controls.Add(this.nameLabel);
+            this.Controls.Add(this.titleLabel);
+            this.DoubleBuffered = true;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -60,7 +92,9 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox Title;
+        private System.Windows.Forms.Label titleLabel;
+        private System.Windows.Forms.Label nameLabel;
+        private System.Windows.Forms.Label dateLabel;
     }
 }
 
