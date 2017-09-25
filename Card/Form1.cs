@@ -28,8 +28,8 @@ namespace Card
             //250, 78
             //255, 60
             //263, 57
-            //186, 73
-            //170, 88
+            //186, 173
+            //170, 188
             //79, 137
         }
 
@@ -97,7 +97,37 @@ namespace Card
 
             formGraphics.DrawLine(drawPen, 44, 74, 90, 82);
 
+            Thread.Sleep(300);
 
+            formGraphics.DrawLine(drawPen, 90, 82, 135, 90);
+
+            Thread.Sleep(300);
+
+            formGraphics.DrawLine(drawPen, 135, 90, 250, 78);
+
+            Thread.Sleep(300);
+
+            formGraphics.DrawLine(drawPen, 250, 78, 255, 60);
+
+            Thread.Sleep(300);
+
+            formGraphics.DrawLine(drawPen, 255, 60, 263, 57);
+
+            Thread.Sleep(300);
+
+            formGraphics.DrawLine(drawPen, 263, 57, 186, 173);
+
+            Thread.Sleep(300);
+
+            formGraphics.DrawLine(drawPen, 186, 173, 170, 188);
+
+            Thread.Sleep(300);
+
+            formGraphics.DrawLine(drawPen, 170, 188, 79, 137);
+
+            Thread.Sleep(300);
+
+            formGraphics.DrawLine(drawPen, 79, 137, 27, 67);
         }
     }
 }
