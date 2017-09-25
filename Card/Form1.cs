@@ -20,22 +20,84 @@ namespace Card
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //coords:
             //27,67 px 
-            
-
+            //44, 74 px
+            //90, 82
+            //135, 90
+            //250, 78
+            //255, 60
+            //263, 57
+            //186, 73
+            //170, 88
+            //79, 137
         }
 
         private void Form1_Click(object sender, EventArgs e)
         {
+            //making everything dissapear
             titleLabel.Visible = false;
             nameLabel.Visible = false;
             dateLabel.Visible = false;
-            
+            this.BackgroundImage = null;
 
-
+            this.Refresh();
+            //drawing the dots
             Graphics formGraphics = this.CreateGraphics();
             SolidBrush drawBrush = new SolidBrush(Color.White);
+
             formGraphics.FillPie(drawBrush, 27, 67, 10, 10, 90, 360);
+
+            Thread.Sleep(300);
+
+            formGraphics.FillPie(drawBrush, 44, 74, 10, 10, 90, 360);
+
+            Thread.Sleep(300);
+
+            formGraphics.FillPie(drawBrush, 90, 82, 10, 10, 90, 360);
+
+            Thread.Sleep(300);
+
+            formGraphics.FillPie(drawBrush, 135, 90, 10, 10, 90, 360);
+
+            Thread.Sleep(300);
+
+            formGraphics.FillPie(drawBrush, 255, 60, 10, 10, 90, 360);
+
+            Thread.Sleep(300);
+
+            formGraphics.FillPie(drawBrush, 250, 78, 10, 10, 90, 360);
+
+            Thread.Sleep(300);
+
+            formGraphics.FillPie(drawBrush, 263, 57, 10, 10, 90, 360);
+
+            Thread.Sleep(300);
+
+            formGraphics.FillPie(drawBrush, 186, 173, 10, 10, 90, 360);
+
+            Thread.Sleep(300);
+
+            formGraphics.FillPie(drawBrush, 170, 188, 10, 10, 90, 360);
+
+            Thread.Sleep(300);
+
+            formGraphics.FillPie(drawBrush, 79, 137, 10, 10, 90, 360);
+
+            //drawing the lines 
+
+            Thread.Sleep(650);
+
+            Pen drawPen = new Pen(Color.White, 3);
+
+
+            formGraphics.DrawLine(drawPen, 27, 67, 44, 74);
+
+            Thread.Sleep(300);
+
+            formGraphics.DrawLine(drawPen, 44, 74, 90, 82);
+
+
         }
     }
 }
