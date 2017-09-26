@@ -38,6 +38,7 @@ namespace Card
             //79, 137
             //OVER 5 DOWN FIVE TO MAKE IT SYNC!!!!!!! DONT FORGET!!!!!!!!!!!!
             //DELETE THIS WHEN YOURE DONE
+            //YOU DID 50 INSTEAD OF 5!!!!!!!!!!!!!! FIX THIS
         }
 
         private void Form1_Click(object sender, EventArgs e)
@@ -52,6 +53,9 @@ namespace Card
             //drawing the dots
             Graphics formGraphics = this.CreateGraphics();
             SolidBrush drawBrush = new SolidBrush(Color.White);
+            Pen drawPen2 = new Pen(Color.White, 10);
+            Font drawFont = new Font("Arial", 10);
+            //create a pen and a font
 
             formGraphics.FillPie(drawBrush, 27, 67, 10, 10, 90, 360);
             Thread.Sleep(300);
@@ -79,52 +83,53 @@ namespace Card
 
             Pen drawPen = new Pen(Color.White, 3);
             
-            formGraphics.DrawLine(drawPen, 27, 67, 44, 74);
+            formGraphics.DrawLine(drawPen, 77, 117, 94, 124);
 
             Thread.Sleep(300);
 
-            formGraphics.DrawLine(drawPen, 44, 74, 90, 82);
+            formGraphics.DrawLine(drawPen, 94, 124, 140, 132);
 
             Thread.Sleep(300);
 
-            formGraphics.DrawLine(drawPen, 90, 82, 135, 90);
+            formGraphics.DrawLine(drawPen, 140, 132, 185, 140);
 
             Thread.Sleep(300);
 
-            formGraphics.DrawLine(drawPen, 135, 90, 250, 78);
+            formGraphics.DrawLine(drawPen, 185, 140, 300, 128); 
 
             Thread.Sleep(300);
 
-            formGraphics.DrawLine(drawPen, 250, 78, 255, 60);
+            formGraphics.DrawLine(drawPen, 300, 128, 305, 110);
 
             Thread.Sleep(300);
 
-            formGraphics.DrawLine(drawPen, 255, 60, 263, 57);
+            formGraphics.DrawLine(drawPen, 305, 110, 313, 107);
 
             Thread.Sleep(300);
 
-            formGraphics.DrawLine(drawPen, 263, 57, 186, 173);
+            formGraphics.DrawLine(drawPen, 313, 107, 236, 223);
 
             Thread.Sleep(300);
 
-            formGraphics.DrawLine(drawPen, 186, 173, 170, 188);
+            formGraphics.DrawLine(drawPen, 236, 223, 220, 238);
 
             Thread.Sleep(300);
 
-            formGraphics.DrawLine(drawPen, 170, 188, 79, 137);
+            formGraphics.DrawLine(drawPen, 220, 238, 79, 137);
 
             Thread.Sleep(300);
 
             formGraphics.DrawLine(drawPen, 79, 137, 27, 67);
             
             // audio
-            SoundPlayer player = new SoundPlayer();
+            SoundPlayer player = new SoundPlayer(Properties.Resources.star);
+            player.Play();
 
-            
 
 
             //info text
-            infoLabel.Text = "Capricornus is one of the 88 modern constellations, and was also one of the 48";
+            formGraphics.DrawString("Capricornus is one of the 88 modern constellations, and was also one of the 48", drawFont, drawBrush, 10, 10);
+            
             Thread.Sleep(300);
 
             infoLabel2.Text = "constellations listed by the 2nd century astronomer Ptolemy.";
