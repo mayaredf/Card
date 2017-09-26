@@ -8,6 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.Media;
+
+//September 22, 2017
+//Created by Maya Redford-Haines
+//This program demonstrates timing, images, sounds, and graphics.
 
 namespace Card
 {
@@ -31,6 +36,8 @@ namespace Card
             //186, 173
             //170, 188
             //79, 137
+            //OVER 5 DOWN FIVE TO MAKE IT SYNC!!!!!!! DONT FORGET!!!!!!!!!!!!
+            //DELETE THIS WHEN YOURE DONE
         }
 
         private void Form1_Click(object sender, EventArgs e)
@@ -47,41 +54,23 @@ namespace Card
             SolidBrush drawBrush = new SolidBrush(Color.White);
 
             formGraphics.FillPie(drawBrush, 27, 67, 10, 10, 90, 360);
-
             Thread.Sleep(300);
-
             formGraphics.FillPie(drawBrush, 44, 74, 10, 10, 90, 360);
-
             Thread.Sleep(300);
-
             formGraphics.FillPie(drawBrush, 90, 82, 10, 10, 90, 360);
-
             Thread.Sleep(300);
-
             formGraphics.FillPie(drawBrush, 135, 90, 10, 10, 90, 360);
-
             Thread.Sleep(300);
-
             formGraphics.FillPie(drawBrush, 255, 60, 10, 10, 90, 360);
-
             Thread.Sleep(300);
-
             formGraphics.FillPie(drawBrush, 250, 78, 10, 10, 90, 360);
-
             Thread.Sleep(300);
-
             formGraphics.FillPie(drawBrush, 263, 57, 10, 10, 90, 360);
-
             Thread.Sleep(300);
-
             formGraphics.FillPie(drawBrush, 186, 173, 10, 10, 90, 360);
-
             Thread.Sleep(300);
-
             formGraphics.FillPie(drawBrush, 170, 188, 10, 10, 90, 360);
-
             Thread.Sleep(300);
-
             formGraphics.FillPie(drawBrush, 79, 137, 10, 10, 90, 360);
 
             //drawing the lines 
@@ -89,8 +78,7 @@ namespace Card
             Thread.Sleep(650);
 
             Pen drawPen = new Pen(Color.White, 3);
-
-
+            
             formGraphics.DrawLine(drawPen, 27, 67, 44, 74);
 
             Thread.Sleep(300);
@@ -128,6 +116,26 @@ namespace Card
             Thread.Sleep(300);
 
             formGraphics.DrawLine(drawPen, 79, 137, 27, 67);
+            
+            // audio
+            SoundPlayer player = new SoundPlayer();
+
+            
+
+
+            //info text
+            infoLabel.Text = "Capricornus is one of the 88 modern constellations, and was also one of the 48";
+            Thread.Sleep(300);
+
+            infoLabel2.Text = "constellations listed by the 2nd century astronomer Ptolemy.";
+            Thread.Sleep(300);
+
+            infoLabel3.Text = "Its name is Latin for horned goat, and it is commonly represented in the form";
+            Thread.Sleep(300);
+
+            infoLabel4.Text = "of a sea-goat: a mythical creature that is half goat, half fish.";
+
+            
         }
     }
 }
