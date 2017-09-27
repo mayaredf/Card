@@ -53,6 +53,7 @@ namespace Card
             //drawing the dots
             Graphics formGraphics = this.CreateGraphics();
             SolidBrush drawBrush = new SolidBrush(Color.White);
+            SolidBrush drawBrush2 = new SolidBrush(Color.LightSkyBlue);
             Pen drawPen2 = new Pen(Color.White, 10);
             Font drawFont = new Font("Arial", 10);
             //create a pen and a font
@@ -78,49 +79,31 @@ namespace Card
             formGraphics.FillPie(drawBrush, 79, 137, 10, 10, 90, 360);
 
             //drawing the lines 
-
+            //one line is off!!! fix this
             Thread.Sleep(650);
 
             Pen drawPen = new Pen(Color.White, 3);
-            
-            formGraphics.DrawLine(drawPen, 77, 117, 94, 124);
 
+            formGraphics.DrawLine(drawPen, 32, 72, 32, 72);
             Thread.Sleep(300);
-
-            formGraphics.DrawLine(drawPen, 94, 124, 140, 132);
-
+            formGraphics.DrawLine(drawPen, 32, 72, 49, 79);
             Thread.Sleep(300);
-
-            formGraphics.DrawLine(drawPen, 140, 132, 185, 140);
-
+            formGraphics.DrawLine(drawPen, 49, 79, 95, 87);
             Thread.Sleep(300);
-
-            formGraphics.DrawLine(drawPen, 185, 140, 300, 128); 
-
+            formGraphics.DrawLine(drawPen, 95, 87, 140, 95);
             Thread.Sleep(300);
-
-            formGraphics.DrawLine(drawPen, 300, 128, 305, 110);
-
+            formGraphics.DrawLine(drawPen, 140, 95, 260, 65);
             Thread.Sleep(300);
-
-            formGraphics.DrawLine(drawPen, 305, 110, 313, 107);
-
+            formGraphics.DrawLine(drawPen, 260, 65, 268, 62);
             Thread.Sleep(300);
-
-            formGraphics.DrawLine(drawPen, 313, 107, 236, 223);
-
+            formGraphics.DrawLine(drawPen, 268, 62, 191, 178);
             Thread.Sleep(300);
-
-            formGraphics.DrawLine(drawPen, 236, 223, 220, 238);
-
+            formGraphics.DrawLine(drawPen, 191, 178, 175, 193);
             Thread.Sleep(300);
-
-            formGraphics.DrawLine(drawPen, 220, 238, 79, 137);
-
+            formGraphics.DrawLine(drawPen, 175, 193, 84, 142);
             Thread.Sleep(300);
+            formGraphics.DrawLine(drawPen, 84, 142, 32, 72);
 
-            formGraphics.DrawLine(drawPen, 79, 137, 27, 67);
-            
             // audio
             SoundPlayer player = new SoundPlayer(Properties.Resources.star);
             player.Play();
@@ -128,19 +111,27 @@ namespace Card
 
 
             //info text
-            formGraphics.DrawString("Capricornus is one of the 88 modern constellations, and was also one of the 48", drawFont, drawBrush, 10, 10);
-            
+
+            formGraphics.DrawString("Capricornus is one of the 88 modern constellations, and was also ", drawFont, drawBrush2, 1, 400);
+
             Thread.Sleep(300);
 
-            infoLabel2.Text = "constellations listed by the 2nd century astronomer Ptolemy.";
+            formGraphics.DrawString(" one of the 48 constellations listed by the 2nd century ", drawFont, drawBrush2, 1, 420);
+
+
+            Thread.Sleep(300);
+            formGraphics.DrawString("astronomer Ptolemy. Its name is Latin for horned goat, and ", drawFont, drawBrush2, 1, 440);
+
+
             Thread.Sleep(300);
 
-            infoLabel3.Text = "Its name is Latin for horned goat, and it is commonly represented in the form";
+            formGraphics.DrawString("it is commonly represented in the form of a sea-goat: a ", drawFont, drawBrush2, 1, 460);
+
             Thread.Sleep(300);
 
-            infoLabel4.Text = "of a sea-goat: a mythical creature that is half goat, half fish.";
+            formGraphics.DrawString("mythical creature that is half goat, half fish.", drawFont, drawBrush2, 1, 480);
 
-            
+
         }
     }
 }
