@@ -25,20 +25,7 @@ namespace Card
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //coords:
-            //27,67 px 
-            //44, 74 px
-            //90, 82
-            //135, 90
-            //250, 78
-            //255, 60
-            //263, 57
-            //186, 173
-            //170, 188
-            //79, 137
-            //OVER 5 DOWN FIVE TO MAKE IT SYNC!!!!!!! DONT FORGET!!!!!!!!!!!!
-            //DELETE THIS WHEN YOURE DONE
-            //YOU DID 50 INSTEAD OF 5!!!!!!!!!!!!!! FIX THIS
+            
         }
 
         private void Form1_Click(object sender, EventArgs e)
@@ -79,9 +66,8 @@ namespace Card
             formGraphics.FillPie(drawBrush, 79, 137, 10, 10, 90, 360);
 
             //drawing the lines 
-            //one line is off!!! fix this
+            
             Thread.Sleep(650);
-
             Pen drawPen = new Pen(Color.White, 3);
 
             formGraphics.DrawLine(drawPen, 32, 72, 32, 72);
@@ -108,27 +94,15 @@ namespace Card
             SoundPlayer player = new SoundPlayer(Properties.Resources.star);
             player.Play();
 
-
-
             //info text
-
             formGraphics.DrawString("Capricornus is one of the 88 modern constellations, and was also ", drawFont, drawBrush2, 1, 400);
-
             Thread.Sleep(300);
-
             formGraphics.DrawString(" one of the 48 constellations listed by the 2nd century ", drawFont, drawBrush2, 1, 420);
-
-
             Thread.Sleep(300);
             formGraphics.DrawString("astronomer Ptolemy. Its name is Latin for horned goat, and ", drawFont, drawBrush2, 1, 440);
-
-
             Thread.Sleep(300);
-
             formGraphics.DrawString("it is commonly represented in the form of a sea-goat: a ", drawFont, drawBrush2, 1, 460);
-
             Thread.Sleep(300);
-
             formGraphics.DrawString("mythical creature that is half goat, half fish.", drawFont, drawBrush2, 1, 480);
 
 
