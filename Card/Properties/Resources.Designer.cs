@@ -68,5 +68,14 @@ namespace Card.Properties {
                 return ResourceManager.GetStream("star", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream star2 {
+            get {
+                return ResourceManager.GetStream("star2", resourceCulture);
+            }
+        }
     }
 }

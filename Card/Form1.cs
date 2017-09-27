@@ -104,7 +104,13 @@ namespace Card
             formGraphics.DrawString("it is commonly represented in the form of a sea-goat: a ", drawFont, drawBrush2, 1, 460);
             Thread.Sleep(300);
             formGraphics.DrawString("mythical creature that is half goat, half fish.", drawFont, drawBrush2, 1, 480);
+            Thread.Sleep(300);
 
+            //audio 
+            SoundPlayer player2 = new SoundPlayer(Properties.Resources.star2);
+            player2.Play();
+
+            
 
         }
     }
